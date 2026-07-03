@@ -15,7 +15,7 @@ import java.util.List;
 public class PlaceOrderRequest {
 
     @NotNull(message = "Table ID is required")
-    private Integer tableNo;
+    private Integer tableNumber;
 
     @NotEmpty(message = "Order must have at least one item")
     @Valid

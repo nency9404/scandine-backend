@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class OrderResponse {
     private Integer id;
-    private Integer tableId;
+    private Integer tableNumber;
     private Double totalPrice;
     private OrderStatus orderStatus;
     private LocalDateTime createdAt;

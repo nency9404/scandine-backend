@@ -32,9 +32,9 @@ public class OrderService {
 
     @Transactional
     public OrderResponse placeOrder(PlaceOrderRequest request) {
-        CafeteriaTable table = tableRepository.findByTableNumber(request.getTableNo())
+        CafeteriaTable table = tableRepository.findByTableNumber(request.getTableNumber())
                 .orElseThrow(() -> new ResourceNotFoundException(
-                        "Table not found with id: " + request.getTableNo()));
+                        "Table not found with id: " + request.getTableNumber()));
 
         Order order = new Order();
         order.setCafeteriaTable(table);
